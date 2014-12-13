@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["olivier@veilleperso.com"]
   spec.summary       = %q{Small wrapper aroud webpurify.com image moderation api.}
   spec.description   = %q{Wrapper for webpurify.com image moderation api, built for my own needs.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/veilleperso/webpurify_api"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,6 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_runtime_dependency "rest-client", "~> 1.7.2"
-  spec.add_runtime_dependency "activesupport"
+  spec.add_runtime_dependency "rest-client", "~> 1.7"
+  spec.add_runtime_dependency "activesupport", '~> 4.0'
 end
