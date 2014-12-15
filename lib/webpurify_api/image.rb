@@ -10,8 +10,9 @@ class WebpurifyApi::Image < WebpurifyApi::Base
     res
   end
 
-  def status(image_id)
-    do_request(:imgstatus, params: { imgid: image_id })
+  def status(custom_image_id: nil, image_id: nil)
+    params = custom_image_id.nil? ? { imgid: image_id } : { customimgid: custom_image_id}
+    do_request(:imgstatus, params: params)
   end
 
   def account
