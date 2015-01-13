@@ -1,6 +1,6 @@
 # WebpurifyApi
 
-API Wrapper for http://webpurify.com image moderation api
+API Wrapper for http://webpurify.com image and video moderation api
 
 ## Installation
 
