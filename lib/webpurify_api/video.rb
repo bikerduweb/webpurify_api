@@ -6,12 +6,11 @@ class WebpurifyApi::Video < WebpurifyApi::Base
   # callback url receive a get request  with +imgid+ and +status+ parameters
   # status: 1 = approved , status: 2 = declined
   def check(url, custom_video_id: nil)
-    res = do_request(:vidcheck, params: {vidurl: url, customvidid: custom_video_id})
-    res
+    do_request(:vidcheck, params: { vidurl: url, customvidid: custom_video_id })
   end
 
   def status(video_id: nil, custom_video_id: nil)
-    params = custom_video_id.nil? ? {vidid: video_id} : {customvidid: custom_video_id}
+    params = custom_video_id.nil? ? { vidid: video_id } : { customvidid: custom_video_id }
     do_request(:vidstatus, params: params)
   end
 
