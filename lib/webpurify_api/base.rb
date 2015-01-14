@@ -57,7 +57,7 @@ class WebpurifyApi::Base
   private
 
   def valid_method?(method)
-    %w(imgcheck imgstatus imgaccount).include?(method.to_s)
+    %w(imgcheck imgstatus imgaccount vidcheck vidstatus vidaccount).include?(method.to_s)
   end
 
   def request_method(method)
