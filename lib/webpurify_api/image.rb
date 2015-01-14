@@ -6,8 +6,7 @@ class WebpurifyApi::Image < WebpurifyApi::Base
   # callback url receive a get request  with +imgid+ and +status+ parameters
   # status: 1 = approved , status: 2 = declined
   def check(url, custom_image_id: nil, callback: nil)
-    res = do_request(:imgcheck, params: { imgurl: url, customimgid: custom_image_id, callback: callback })
-    res
+    do_request(:imgcheck, params: { imgurl: url, customimgid: custom_image_id, callback: callback })
   end
 
   def status(custom_image_id: nil, image_id: nil)
