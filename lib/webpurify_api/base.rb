@@ -72,7 +72,7 @@ class WebpurifyApi::Base
     params ||= {}
     params.reverse_merge!(format: 'json', api_key: self.api_key)
     params[:method] = request_method(method)
-    query = params.select { |k, v| !v.blank? }.collect { |k, v| "#{k}=#{CGI.escape(v.to_s)}"}.join("&")
+    query = params.select { |k, v| !v.blank? }.map { |k, v| "#{k}=#{CGI.escape(v.to_s)}"}.join("&")
     "#{endpoint}?#{query}"
   end
 end
